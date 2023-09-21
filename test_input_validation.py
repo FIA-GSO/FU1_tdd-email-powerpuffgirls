@@ -9,6 +9,9 @@ from input_validation import is_valid_email
 ,   ("te-st@email.com")
 ,   ("te_st@email.com")
 ,   ("test1@email.com")
+,   ("G.Karagkiaouridis@outlook.com")
+,   ("georkara12@gmail.com")
+,   ("seeeko66@gmail.com")
 ])
 def test_is_valid_email__gueltige_Adressen(email):
     # arrange
