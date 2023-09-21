@@ -1,5 +1,6 @@
 import pytest
-from input_validation import is_valid_email
+from input_validation import is_valid_email, is_valid_password
+
 
 @pytest.mark.parametrize("email", [
     ("test@email.com")
@@ -35,3 +36,14 @@ def test_is_valid_email__ungueltige_Adressen(email):
     
     # assert
     assert response is False
+
+@pytest.mark.parametrize("pwd", [
+    ("HalloichheißeMarvinundbintoll")
+,   ("Test123!")
+,   ("FridelTest")
+])
+
+def test_is_valid_password(pwd):
+    pwd_to_be_tested = pwd
+    response = is_valid_password(pwd)
+    assert response is True
