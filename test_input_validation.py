@@ -42,8 +42,7 @@ def test_is_valid_email__ungueltige_Adressen(email):
 
 @pytest.mark.parametrize("pwd", [
     ("HalloichheißeMarvinundbintoll")
-,   ("Test123!")
-,   ("FridelTest")
+,   ("Test123!"),("Friedeltest")
 ])
 
 def test_is_valid_password(pwd):
